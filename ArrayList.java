@@ -74,11 +74,24 @@ class ArrayList {
     public static void main(String [] args) {
 
         ArrayList test = new ArrayList();
+        int initSize = 50;
 
-        for(int i=100;i<200; i++){
+        for(int i=0;i<initSize; i++){
             test.add(i);
         }
 
         test.print();
+
+        // Test size/add
+        assert test.getSize() == initSize;
+
+        // Test get
+        assert (int)test.get(0) == 0;
+        assert (int)test.get(initSize-1) == initSize-1;
+
+        // Test remove
+        test.remove(0);
+        assert (int)test.get(0) == 1;
+
     }
 }
