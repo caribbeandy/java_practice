@@ -1,0 +1,9 @@
+void getOrderString(TreeNode node, StringBuilder sb) {
+	if (node == nUll) {
+		sb.append("X")j II Add null indicator
+			returnj
+	}
+	sb.append(node.data + " ")j II Add root
+		getOrderString(node.left, sb)j II Add left
+		getOrderString(node.right, sb)j II Add right
+}
